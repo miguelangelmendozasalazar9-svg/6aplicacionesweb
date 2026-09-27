@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #1e2a38;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #cfd8e3;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.tarjeta {
+    background-color: white;
+    border-top: 6px solid var(--color-acento, #1e2a38);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta h2 {
+    color: var(--color-acento, #1e2a38);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.columna {
+    margin-bottom: 15px;
+}
+
+.columna h3 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.columna ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.columna li {
+    font-size: 0.88rem;
+    line-height: 1.4;
+    padding-left: 12px;
+    position: relative;
+}
+
+.columna li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-acento, #1e2a38);
+}
+
+footer {
+    background-color: #1e2a38;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+    .tarjeta {
+        width: 100%;
+    }
+}
+.logo-red {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto 10px auto;
+    object-fit: contain;
+}
+/* ===== BOTONES DEL HEADER ===== */
+/* ===== BOTONES ESTILO "PASTILLA" (tipo barra superior) ===== */
+.botones-header {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: white;
+    color: #1e2a38;
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-header:hover {
+    background-color: #e8edf2;
+    transform: translateY(-2px);
+}
+
+.icono-btn {
+    font-size: 1rem;
+}
+
+.btn-header:hover {
+    background-color: #cfd8e3;
+    transform: translateY(-2px);
+}
+
+/* ===== SECCIÓN "QUIÉNES SOMOS" ===== */
+.seccion-info {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.seccion-info h2 {
+    color: #1e2a38;
+    margin-bottom: 15px;
+}
+
+.seccion-info p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* ===== SCROLL SUAVE AL HACER CLIC EN LOS BOTONES ===== */
+html {
+    scroll-behavior: smooth;
+}
+/* ===== SECCIONES GENERALES (para productos.html) ===== */
+.seccion {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+ 
+.titulo-seccion {
+    text-align: center;
+    color: #1e2a38;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+ 
+/* ===== TARJETAS DE PRODUCTOS/SERVICIOS (hijo2 > nieto2) ===== */
+.hijo2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+ 
+.nieto2 {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ 
+.nieto2:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+ 
+.nieto2 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;      /* recorta la imagen sin deformarla */
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: block;
+}
+ 
+.nieto2 h3 {
+    color: #1e2a38;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+ 
+.nieto2 p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+ 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .hijo2 {
+        grid-template-columns: 1fr;
+    }
+}
+.btn-header {
+    position: relative;
+    overflow: hidden; /* importante para que la onda no se salga del botón */
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(30, 42, 56, 0.4);
+    transform: scale(0);
+    animation: efecto-ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes efecto-ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
